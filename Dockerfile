@@ -21,8 +21,11 @@ RUN apt-get update -y && \
     cron && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 ADD rootfs /
+
+ADD https://github.com/vishnubob/wait-for-it/blob/master/wait-for-it.sh /usr/bin/wait-for-it
+RUN chmod a+x /usr/bin/wait-for-it
+
 CMD ["bash"]
 
 LABEL org.label-schema.version=latest
