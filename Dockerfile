@@ -23,8 +23,8 @@ RUN apt-get update -y && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD rootfs /
 
-ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /usr/bin/wait-for-it
-RUN chmod a+x /usr/bin/wait-for-it
+#ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /usr/bin/wait-for-it
+#RUN chmod a+x /usr/bin/wait-for-it
 
 
 CMD ["bash"]
